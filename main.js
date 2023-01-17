@@ -10,9 +10,10 @@ const writeRandomCocktail = () => {
       return r.json();
     })
     .then((r) => {
-      if (r.drinks !== 1) {
+      if (r.drinks.length !== 1) {
         throw new Error("Drink list invalid length");
       }
+      console.log(r.drinks);
       const drinkName = r.drinks[0].strDrink;
       // outputEl.innerText = JSON.stringify(r, undefined, 2);
       outputEl.innerText = drinkName;
