@@ -3,8 +3,16 @@ const URL = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
 const writeRandomCocktail = () => {
   window
     .fetch(URL, { method: "GET" })
-    .then((r) => r.json())
     .then((r) => {
+      if (r.status !== 200) {
+        throw new Error("Bad response from API");
+      }
+      return r.json();
+    })
+    .then((r) => {
+      if (r.drinks !== 1) {
+        throw new Error("Drink list invalid length");
+      }
       const drinkName = r.drinks[0].strDrink;
       // outputEl.innerText = JSON.stringify(r, undefined, 2);
       outputEl.innerText = drinkName;
