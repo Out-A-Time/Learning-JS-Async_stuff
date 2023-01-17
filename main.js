@@ -6,7 +6,7 @@ const writeRandomCocktail = () => {
     .then((r) => r.json())
     .then((r) => {
       const drinkName = r.drinks[0].strDrink;
-      //   outputEl.innerText = JSON.stringify(r, undefined, 2);
+      // outputEl.innerText = JSON.stringify(r, undefined, 2);
       outputEl.innerText = drinkName;
     })
     .catch((e) => console.error(e));

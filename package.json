@@ -1,0 +1,20 @@
+{
+  "name": "week16_async_stuff",
+  "version": "1.0.0",
+  "description": "example from Accelerator about Async API",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertMaksymow/Week16_Async_stuff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobertMaksymow/Week16_Async_stuff/issues"
+  },
+  "homepage": "https://github.com/RobertMaksymow/Week16_Async_stuff#readme"
+}
